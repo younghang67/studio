@@ -1,0 +1,610 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+.content-site-wrapper {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* ------------------------- scrolling nav bar --------------------------- */
+.show-on-scroll-btn {
+  display: none;
+}
+.show-on-scroll {
+  position: fixed;
+  width: 100%;
+  top: -1rem;
+  z-index: 9;
+  visibility: none;
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+.show {
+  opacity: 1;
+  top: 0;
+  visibility: visible;
+}
+
+.scroll-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  background-color: black;
+  font-size: 15px;
+}
+.scroll-nav a {
+  text-decoration: none;
+  margin-inline: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgb(173, 173, 173);
+  transition: all 200ms ease-in-out;
+}
+.scroll-nav a:hover {
+  color: white;
+}
+
+/* ------------------------- //scrolling nav bar --------------------------- */
+
+/* ------------------------------ static nav & website logo ------------------------------------ */
+
+#hero-section {
+  margin-block: 1rem;
+  height: 53rem;
+  overflow: hidden;
+}
+.static-nav-wrapper {
+  padding-block: 60px;
+}
+.static-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 15px;
+}
+.static-nav a {
+  text-decoration: none;
+  margin-inline: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgb(173, 173, 173);
+  transition: all 0.2s ease-in-out;
+}
+.static-nav a.discography {
+  margin-right: 11.5rem;
+}
+.static-nav a.gallery {
+  margin-left: 11.5rem;
+}
+.static-nav a:hover {
+  color: white;
+}
+.site-logo-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+.site-logo img {
+  height: auto;
+  width: 265px;
+}
+
+/* ------------------------------ static nav & website logo ------------------------------------ */
+
+/* ------------------------------- Hero section ------------------------------------- */
+
+.img-container {
+  position: absolute;
+  width: 100%;
+  height: 58rem;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+}
+.img-holder {
+  width: 100%;
+  height: 58rem;
+  background-image: url("img/hero-img2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.hero-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+  font-size: 2.7rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 3.5rem;
+  margin-block: 6rem;
+  padding-block: 5rem;
+}
+
+/* ------------------------------- //Hero section ------------------------------------- */
+
+/* --------------------------------------------- about section ----------------------------- */
+#about-section {
+  margin-block: 4.5rem;
+  padding-block: 1rem;
+}
+#about-section > .content-site-wrapper {
+  padding: 0;
+}
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-content {
+  flex-basis: 55%;
+  padding-inline: 2rem;
+  box-sizing: border-box;
+}
+.about-content h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 2.4rem;
+  /* text-align: justify; */
+}
+.about-content p {
+  line-height: 1.7rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+.about-img-grid {
+  box-sizing: border-box;
+  padding-inline: 2rem;
+  margin-top: 3.5em;
+  flex-basis: 42%;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(4, 200px);
+  grid-gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.about-grid-element,
+.about-img-grid a {
+  width: 13em;
+  height: 13em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.about-grid-element img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.about-img-grid a:hover .about-grid-element img {
+  transform: scale(1.1);
+}
+/* --------------------------------------------- //about section ----------------------------- */
+
+/* ----------------------------------- discography ----------------------------------------- */
+#discography {
+  box-sizing: border-box;
+  padding-block: 2.5rem;
+  margin-top: 4rem;
+}
+.discography-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.discography-img-holder {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+.discography-img-holder img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.spotify {
+  flex-basis: 45%;
+  width: 100%;
+}
+
+/* ----------------------------------- //discography ----------------------------------------- */
+
+/* --------------------------- gallery ------------------------- */
+#gallery {
+  height: 32rem;
+  box-sizing: border-box;
+  margin-block: 3rem;
+  overflow: hidden;
+}
+
+.carousel {
+  background-color: rgb(212, 211, 211);
+  height: 32rem;
+  top: -1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slide {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  box-sizing: border-box;
+  inset: 0;
+  opacity: 0;
+  transition: 300ms opacity ease-in-out;
+  transition-delay: 100ms;
+}
+.slide .gallery-img-holder {
+  width: 35rem;
+  overflow: hidden;
+}
+.gallery-img-holder > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease-in-out;
+}
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.629);
+}
+
+.carousel-button.prev {
+  left: 20rem;
+}
+.carousel-button.next {
+  right: 20rem;
+}
+
+/* --------------------------- //gallery ------------------------- */
+
+/* --------------------------------- contact section ------------------------------------------ */
+#contact {
+  width: 100%;
+  height: 30rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-block: 4rem;
+}
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-content h3 {
+  margin: 0;
+  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.contact-content .contact-text p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: rgba(0, 0, 0, 0.62);
+  box-sizing: border-box;
+}
+.contact-text {
+  flex-basis: 40%;
+  width: 100%;
+}
+.contact-socials {
+  flex-basis: 25%;
+  letter-spacing: 0.6px;
+  box-sizing: border-box;
+  padding-left: 3rem;
+  width: 100%;
+}
+.contact-socials p {
+  margin: 6px 0 0 0;
+  color: rgba(0, 0, 0, 0.62);
+}
+.contact-socials h4 {
+  margin: 0;
+}
+.contact-links a {
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 800);
+}
+
+/* --------------------------------- //contact section ------------------------------------------ */
+
+/* --------------------------------------- footer section -------------------------------------------- */
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+  background-color: rgb(29, 29, 29);
+  font-size: 1.5rem;
+  text-align: center;
+}
+#social a {
+  text-decoration: none;
+  margin-inline: 1.5rem;
+  font-weight: 600;
+  color: rgb(200, 200, 200);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-end {
+  background-color: rgb(17, 17, 17);
+  width: 100%;
+  height: 6em;
+}
+/* --------------------------------------- //footer section -------------------------------------------- */
+
+/* -------------------------------------- Screen size : 1315 only for the carousel buttons --------------------------------------------- */
+@media only screen and (max-width: 1315px) {
+  .carousel-button.prev {
+    left: 0rem;
+  }
+  .carousel-button.next {
+    right: 0rem;
+  }
+}
+
+/* -------------------------------------- Screen size : 1100 --------------------------------------------- */
+@media only screen and (max-width: 1100px) and (min-width: 845px) {
+  /* ---------------- static nav ---------------- */
+  .static-nav a.discography {
+    margin-right: 1rem;
+  }
+  .static-nav a.gallery {
+    margin-left: 1rem;
+  }
+  .static-nav {
+    margin-top: 2.5rem;
+  }
+  .site-logo-wrapper {
+    z-index: -1;
+  }
+  .site-logo img {
+    width: 100px;
+  }
+  /* ---------------- static nav ---------------- */
+
+  /* ---------------------- about ----------------- */
+  .about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-content {
+    box-sizing: border-box;
+    max-width: 53rem;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  .about-img-grid {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(4, 200px);
+    grid-gap: 3em;
+  }
+  .about-grid-element,
+  .about-img-grid a {
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  /*  --------------- about --------------- */
+  /*------------------ gallery ----------------- */
+  .carousel-button.prev {
+    left: 0rem;
+  }
+  .carousel-button.next {
+    right: 0rem;
+  }
+  /*------------------ //gallery ----------------- */
+}
+
+/* ----------------------------- screen size : 845 px------------------ */
+@media only screen and (max-width: 845px) and (min-width: 700px) {
+  /* --------------- hero section -------------- */
+  .static-nav a.discography {
+    margin-right: 1rem;
+  }
+  .static-nav a.gallery {
+    margin-left: 1rem;
+  }
+  .static-nav {
+    margin-top: 2.5rem;
+  }
+  .site-logo-wrapper {
+    z-index: -1;
+  }
+  .site-logo img {
+    width: 100px;
+  }
+  /* --------------- hero section -------------- */
+
+  .discography-container {
+    flex-direction: column;
+  }
+  .about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-img-grid {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(4, 150px);
+  }
+  .about-grid-element,
+  .about-img-grid a {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  /*------------------ contact ----------------- */
+  .contact-content {
+    flex-direction: column;
+  }
+  .contact-socials {
+    padding-left: 0rem;
+    width: 100%;
+  }
+  /*------------------ //contact ----------------- */
+}
+/* ---------------------------------------- for phones maxwidth: 700px ------------------------------- */
+@media only screen and (max-width: 700px) {
+  .site-logo-wrapper {
+    z-index: -2;
+  }
+  .site-logo img {
+    width: 11.5rem;
+  }
+  .show-on-scroll-btn {
+    display: block;
+    position: fixed;
+    top: 2.5rem;
+    left: 1.2rem;
+    z-index: 5;
+  }
+  .show-btn,
+  .close-btn {
+    padding: 5px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    background-color: black;
+    border: transparent;
+    border-radius: 2px;
+  }
+  .show-on-scroll {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    visibility: visible;
+    opacity: 1;
+    transition: all 200ms ease-in;
+    display: none;
+  }
+  .show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .show-2 {
+    display: block;
+  }
+  .scroll-nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+  .scroll-nav a {
+    margin-block: 1.5rem;
+    font-weight: 600;
+    color: rgb(173, 173, 173);
+    transition: all 200ms ease-in-out;
+  }
+  .scroll-nav a:hover {
+    color: white;
+  }
+
+  .static-nav {
+    display: none;
+    height: 10rem;
+  }
+
+  /* -------------- hero content ------------ */
+  .hero-content {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+  /* -------------- about ------------ */
+  .about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-img-grid {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(4, 150px);
+  }
+  .about-grid-element,
+  .about-img-grid a {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  /* -------------- //about ------------ */
+  /* --------------------- discography -------------------- */
+  .discography-container {
+    flex-direction: column;
+  }
+  .spotify {
+    box-sizing: border-box;
+    padding: 0.5rem 0.2rem;
+  }
+  /* --------------------------//discography------------------------ */
+  /* ---------------------------- contacts ------------------------- */
+  .contact-content {
+    flex-direction: column;
+  }
+  .contact-socials {
+    padding-left: 0rem;
+  }
+  /* ----------------------------//contacts------------------------- */
+}
